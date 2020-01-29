@@ -1,17 +1,29 @@
 import React,{ Component } from 'react';
 
 class CountApp extends Component{
-  // constructor() {
-  // }
+  constructor() {
+    super()
+    this.state = {
+      count:0
+    }
+  }
+  plus() {
+    this.setState({count:this.state.count + 1})
+  }
 
+  minus() {
+    this.setState({count:this.state.count - 1})
+  }
   render(){
     return (
       <div>
         <h1>カウンター</h1>
-        <p>0</p>
+        <p>{this.state.count}</p>
         <div>
-          <button>+</button>
-          <button>-</button>
+          <button onClick={() => this.plus()}>+</button>
+          // <button onClick={() => this.setState({ count: this.state.count + 1 })}>+</button>
+          <button onClick={() => this.minus()}>-</button>
+          // <button onClick={() => this.setState({ count: this.state.count - 1 })}>-</button>
         </div>
       </div>
     );
