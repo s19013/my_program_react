@@ -21,9 +21,9 @@ class CountApp extends Component{
         <p>{this.state.count}</p>
         <div>
           <button onClick={() => this.plus()}>+</button>
-          // <button onClick={() => this.setState({ count: this.state.count + 1 })}>+</button>
+          {/*<button onClick={() => this.setState({ count: this.state.count + 1 })}>+</button> */}
           <button onClick={() => this.minus()}>-</button>
-          // <button onClick={() => this.setState({ count: this.state.count - 1 })}>-</button>
+          {/*<button onClick={() => this.setState({ count: this.state.count - 1 })}>-</button> */}
         </div>
       </div>
     );
