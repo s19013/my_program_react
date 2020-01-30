@@ -1,0 +1,11 @@
+最新の入れ方
+
+npm install -D
+electron
+react ReactDOM
+@babel/core @babel/preset-env @babel/preset-react
+webpack webpack-cli babel-loader
+
+babel-xxxx-xxxx
+↓
+@babel/xxxx-xxxx
