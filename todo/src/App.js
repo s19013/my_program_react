@@ -1,54 +1,26 @@
-import React,{ Component } from 'react';
-import TodoElement from './conponent/ToDoElement'
-import AddTodo from './conponent/AddTodo'
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-class TodoApp extends Component {
-  constructor() {
-    super();
-    this.state={
-      count:0,
-      value:"",
-      todoList: [],
-    }
-  }
-
-  handleDelete(id) {
-    let todoList = this.state.todoList.concat()
-    let index = 0
-    todoList.map((element,idx) => {
-      if (element.id == id){
-        index = idx
-      }
-    })
-    todoList.splice(index,1)
-    // this.setState({todoList:todoList})
-  }
-  render() {
-    const todoListNode = this.state.todoList.map(element => {
-      return (
-        <TodoElement
-        key={element.id}
-        element={element}
-        onDelete={this.handleDelete.bind(this)}
-        {...this.state}
-      />
-    )
-  })
-
-    return(
-      <div>
-        <h1>ToDo</h1>
-        <AddTodo
-          {...this.state}
-          onChange={this.onChange.bind(this)}
-          add={(this.add.bind(this)}
-        />
-        <ul>
-          {todoListNode}
-        </ul>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
-export default TodoApp;
+export default App;
