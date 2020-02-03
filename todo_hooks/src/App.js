@@ -1,7 +1,9 @@
 // import React,{Component} from 'react'
 import React, {useState} from 'react';
 import TodoElement from './conponent/ToDoElement'
-import AddTodo from './conponent/AddTodo'
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+// import AddTodo from './conponent/AddTodo'
 
 const App =() => {
   const [value,setValue] = useState("");
@@ -18,19 +20,24 @@ const App =() => {
   }
 
   const add = () => {
-    const newTodo = { id: todoList.length,content:value }
+    const newTodo = { id: todoList.length, content:value }
     const newTodoList = [...todoList,newTodo];
     setTodoList(newTodoList);
     setValue("");
-    console.log(`newtodo:[${newTodo}]`);
-    console.log(`todoList:[${todoList}]`);
-  }
+    console.log(value);
+  };
 
   return (
     <div>
       <h1>todo</h1>
       <div>
-          <AddTodo onChange={handleChange} add={add}/>
+        <TextField label="what will do?" value={value} onChange={handleChange}/>
+        {/*<input type="text" value={value} onChange={handleChange}/>*/}
+        {/*<button onClick={add}>add</button>*/}
+        <Button variant="contained" color="secondary" onClick={add}>
+          ADD
+        </Button>
+          {/* <AddTodo onChange={handleChange} add={add}/> */}
         <ul>
           {todoList.map((todo) => (
             <TodoElement
