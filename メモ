@@ -2,10 +2,18 @@
 
 npm install -D
 electron
-react ReactDOM
+react react-dom
 @babel/core @babel/preset-env @babel/preset-react
-webpack webpack-cli babel-loader
+babel-loader
+webpack webpack-cli 
 
 babel-xxxx-xxxx
 ↓
 @babel/xxxx-xxxx
+
+
+electoron のエラーについて
+エレクトロンのバージョンを落とす
+のーどモジュールを消す
+json に書いてある　electron のバージョンを変える　6.1.3
+
