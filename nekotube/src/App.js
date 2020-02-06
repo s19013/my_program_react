@@ -19,13 +19,32 @@ class App extends Component {
     });
     console.log("componentDidMount");
   }
+
+  onVideoClickedHandler = (video) => {
+    this.setState({selectedVideo: video})
+  }
+
+  onkeywordChangedHandler = (keyword) => {
+    let newTerm= '猫'　+ keyword;
+    if (keyword === '') {
+      newTerm= '猫'
+    }
+    YSearch({ key: API, term: newTerm}, (data) => {
+      this.setState({videos: data,selectedVideo:data[0]});
+    });
+  }
+
   render() {
     return (
       <div className = "App">
-        <Header/>
+        <Header onkeywordChanged={this.onkeywordChangedHandler}/>
         <Body>
           <Video video={this.state.selectedVideo} />
-          <List videos={this.state.videos}/>
+          <List
+            videos={this.state.videos}
+            onVideoClicked={this.onVideoClickedHandler}
+            selectedVideo={this.state.selectedVideo}
+          />
 
         </Body>
       </div>
