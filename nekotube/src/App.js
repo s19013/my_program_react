@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './App.css'
 import Header from './components/Header/Header'
 import Body from './components/Body/Body'
-import Item from './components/Video/Item/Item'
 import List from './components/Video/List/List'
 import Video from './components/Video/Video'
 import YSearch from 'youtube-api-search';

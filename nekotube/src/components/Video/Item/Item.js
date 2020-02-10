@@ -2,8 +2,8 @@ import React from 'react';
 // import './Item.css'
 
 const Item = (props) => {
-  console.log("this gat props");
-  console.log(props.video);
+  // console.log("this gat props");
+  // console.log(props.video);
   return(
     <li className="list-group-item"
       onClick={() => props.onVideoClicked(props.video)}

@@ -1,6 +1,6 @@
 import React from 'react';
 import Item from '../Item/Item';
-import './List.css'
+// import './List.css'
 
 
 const List = (props) => {
