@@ -14,7 +14,7 @@ class App extends Component {
     selectedVideo: null
   }
   componentDidMount(){
-    YSearch({ key: API, term: '猫',}, (data) => {
+    YSearch({ key: API, term: 'beatmania',}, (data) => {
       this.setState({videos: data,selectedVideo:data[2]});
     });
     console.log("componentDidMount");
@@ -25,7 +25,7 @@ class App extends Component {
   }
 
   onkeywordChangedHandler = (keyword) => {
-    let newTerm= '猫'　+ keyword;
+    let newTerm= '猫'+ keyword;
     if (keyword === '') {
       newTerm= '猫'
     }
