@@ -14,7 +14,7 @@ class App extends Component {
     selectedVideo: null
   }
   componentDidMount(){
-    YSearch({ key: API, term: '猫'}, (data) => {
+    YSearch({ key: API, term: '猫',}, (data) => {
       this.setState({videos: data,selectedVideo:data[2]});
     });
     console.log("componentDidMount");

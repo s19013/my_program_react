@@ -1,0 +1,8 @@
+.media-body{
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+  -moz-text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+
+}
